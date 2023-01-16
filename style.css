@@ -24,11 +24,86 @@ This Section is Full Stack // Intro Frontend -
             Bootstrap: https://getbootstrap.com/
             Foundation: https://get.foundation/
 
+CSS Preprocessors & CSS Variables
+
+1- First you start by rewriting all colors with Native CSS color variables - Save copy
+2- Then Nest properly categories - Save a copy 
+
+
+    CSS preprocessors are programs used to extend the capabilities of CSS
+    CSS preprocessor with your own code allows you to create reusable code snippets and easily automate repetitive tasks
+    Transpiling / compiling = converting code from one language to another
+    Most common : 
+
+    Sass: https://sass-lang.com/
+    https://codepen.io/sasstantrum/post/intro-to-sass
+    
+    Less: https://lesscss.org/
+    Stylus: https://stylus-lang.com/
+        To practice writing Sass code  
+        To translate your SCSS into plain CSS in real time
+        --- try SassMeister : https://www.sassmeister.com/ 
+   
+3- Transpile all CSS into SCSS - Save a copy style.scss
+    To translate CSS into SCSS :
+    https://www.cssportal.com/css-to-scss/
+
+4- Add Autoprefixer - save a copy as style.production.css
+    CSS Postprocessors : 
+    analyze and add on Javascript CSS specific characteristics for compatibility / readability
+    To add autoprfixer : 
+    https://autoprefixer.github.io/
+
 */
 
+
+/*
+1- First you start by rewriting all colors with Native CSS color variables
+2- Then Nest properly categories - Save a copy 
+then Post CSS playground - add autoprefixer = style.playground.css
+*/
+
+/* Note to self
+h1 is   32px   (2em)
+h2 is   24px (1.5em)
+h3 is 20.8px (1.3em)
+h4 is   16px   (1em)
+h5 is 12.8px (0.8em)
+h6 is 11.2px (0.7em)
+*/
+
+:root {
+    --primary-color:#caebf2;
+    --secondary-color: #000080;
+
+    --background-color:#caebf2;
+    --secondary-background-color: #000080;
+
+    --primary-text-color:blue; 
+    --secondary-text-color:brown;
+
+    --font-weight-1: 250px;
+    --font-weight-2: 400px;
+    --font-weight-3: 700px;
+  
+    --font-size-1: 32px;
+    --font-size-2: 24px;
+    --font-size-3: 20.8px;
+    --font-size-4: 16px;
+  }
+/* Color Contrast Checker
+https://contrastchecker.com/
+*/
 * {
     box-sizing: border-box;
   }
+
+  header{
+    font-family: "Noto Sans", sans-serif;
+    color: var(--primary-text-color); 
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-3);
+}
 
   .page-header {
     display: flex;
@@ -53,84 +128,45 @@ This Section is Full Stack // Intro Frontend -
   margin-left: 15px;
 }
 
+.navigation-list__item--active {
+    text-decoration: none;
+  }
+
+
+
 body {
-    font-family: 'Noto Sans', sans-serif;
-    background: #caebf2;
-}
-
-h1, h2, h3, h4 {
-    font-family: 'Roboto Mono', monospace;
-}
-
-p{
-    color:brown;
-}
-h3{
-    color:blue;  
-}
-h4{
-    color:blue;  
-}
-
-.about-list-item {
-    font-style: italic;
-}
-
-#my-name{ color:brown;
-}
-
-@media (max-width:600px){
-    .grid-table{
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto auto auto auto; 
-    }
-}
-
+    font-family: "Noto Sans", sans-serif;
+    background-color: var(--primary-color);
+  }
+  
+        h1 {
+            font-family: "Roboto Mono", monospace;
+            color: var(--primary-text-color);
+        }
+        
+        h2 {
+            font-family: "Roboto Mono", monospace;
+            color: var(--secondary-text-color);
+        }
+        
+        h3 {
+            font-family: "Roboto Mono", monospace;
+            color: var(--secondary-text-color);
+        }
+        
+        h4 {
+            font-family: "Roboto Mono", monospace;
+            color:var(--primary-text-color);
+        }
+  
 .container {
     max-width:840px;
     margin: 0 auto;
 }
-
-.intro{
-    text-align: center;
-}
-.about-grid{
-    display: grid; 
-    grid-template-columns: 50% 50%;
-}
-.i-am,.i-like{
-    text-align: center;
-}
-.about-list{
-    list-style: none;
-}
-
-@media (max-width:480px){
-    .about-grid{
-        grid-template-columns: 100%;
-    }
-}
-.projects-heading{
-    text-align: center;
-}
-.projects-grid{
-    display: grid; 
-    grid-template-columns: 50% 50%;
-}
-.project-image{
-    justify-self: center;
-    padding: 4%;
-}
-@media (max-width:650px){
-    .projects-grid{
-        grid-template-columns: 100%;
-    }
-}
-
 .container > div{
     margin: 50px auto;
 }
-
+        
 .profile-picture{
     border-radius: 50%;
     width: 150px;
@@ -142,25 +178,43 @@ h4{
     filter:brightness(.75);
     box-shadow: 0 8px 12px 0 rgb(34, 60, 80, 0.16);
 }
+#my-name{ 
+    color: var(--secondary-text-color);
+}
 
+.about-list-item {
+    font-style: italic;
+    color:var(--primary-text-color);
+}
+
+
+
+.intro{
+    text-align: center;
+}
+.about-grid{
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+}
+.i-am,.i-like{
+    text-align: center;
+}
+.about-list{
+    list-style: none;
+}
+
+.projects-heading{
+    text-align: center;
+}
+.projects-grid{
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+}
 .project-image-wrapper:hover {
     justify-self: center;
     padding: 4%;
     position: relative;
 }
-.project-image{
-    border-radius: 5px;
-    width: 350px;
-    height: 350px;
-    box-shadow: 0 4px 6px 0 rgb(34, 60, 80, 0.16);
-    transition: all ease-in-out .5s;
-
-}
-.project-image:hover{
-    filter:brightness(.75);
-    box-shadow: 0 8px 12px 0 rgb(34, 60, 80, 0.16);
-}
-
 .project-image-wrapper:hover > h4 {
     visibility: visible;
     
@@ -175,7 +229,24 @@ h4{
     z-index: 2;
     transition: all ease-in-out .5s;
 }
- 
+
+.project-image{
+    border-radius: 5px;
+    width: 350px;
+    height: 350px;
+    box-shadow: 0 4px 6px 0 rgb(34, 60, 80, 0.16);
+    transition: all ease-in-out .5s;
+
+}
+.project-image{
+    justify-self: center;
+    padding: 4%;
+}
+.project-image:hover{
+    filter:brightness(.75);
+    box-shadow: 0 8px 12px 0 rgb(34, 60, 80, 0.16);
+}
+
 form input, textarea{
     padding: 5px;
     border-radius: 5px;
@@ -184,10 +255,38 @@ form input, textarea{
 form input[type="submit"] {
     width: 250px;
 }
+/*Same buttons styling */
+.submit-button-wrapper{
+    margin:20px 0;
+}
+.button1{
+    border: none;
+    font-family: inherit;
+    background-color: var(--secondary-background-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition: 0.2s opacity;
+}
 
-.links-and-contacts{
-    display: grid; 
-    grid-template-columns: 50% 50%;    
+#submit-button {
+    border: none;
+    font-family: inherit;
+    background-color: var(--secondary-background-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition: 0.2s opacity;
+}
+
+.button1:hover,.button1:focus, 
+#submit-button:hover, #submit-button:focus {
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 .page-footer {
@@ -201,32 +300,26 @@ form input[type="submit"] {
 
 }
 
+/* always write responsive classes at the very end of CSS to ensure Overwritting*/
+@media (max-width:600px){
+    .grid-table{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto; 
+    }
+}
+
+@media (max-width:650px){
+    .projects-grid{
+        grid-template-columns: 100%;
+    }
+}
+@media (max-width:480px){
+    .about-grid{
+        grid-template-columns: 100%;
+    }
+}
 @media (max-width:650px){
     .links-and-contacts{
         grid-template-columns: 100%;
     }
-}
-
-.submit-button-wrapper{
-    margin:20px 0;
-}
-
-#submit-button {
-    color: blue;
-    border: none;
-    display: inline-block;
-    font-family: inherit;
-    background-color: #357b70;
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 3px;
-
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-    transition: 0.2s opacity;
-}
-
-#submit-button:hover, #submit-button:focus {
-    cursor: pointer;
-    opacity: 0.8;
 }
