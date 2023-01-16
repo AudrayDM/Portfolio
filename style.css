@@ -1,4 +1,50 @@
 /*Tips for Best practices Web Content Accessibility https://www.w3.org/WAI/standards-guidelines/wcag/ */
+/*https://fonts.google.com/ ref for font embeding*/
+/*Note that your code needs to be ordered From general rules to more specifics onbe */
+/*Tips for Chosing the right color https://www.color-hex.com/ or https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF */
+/*Tips for mastering margin collapsing https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing*/
+/*Tips for display best practice https://www.w3schools.com/css/css_display_visibility.asp*/
+
+/*Tips TO TRY !!!!WORKING WITH VERTICAL SCRIPTS !!! Soo Cool!!!
+https://www.w3.org/International/articles/vertical-text/
+*/
+
+* {
+    box-sizing: border-box;
+  }
+
+  .page-header {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .page-header__item {
+    flex: 0 1 200px;
+  }
+  
+.page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+  }
+  
+  .navigation-list {
+    list-style-type: none;
+  }
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background: #caebf2;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Roboto Mono', monospace;
+}
 
 p{
     color:brown;
@@ -77,33 +123,31 @@ h4{
     padding: 0;
 }
 
+.links-list:hover{
+    filter:brightness(.75);
+    box-shadow: 0 8px 12px 0 rgb(34, 60, 80, 0.16);
+}
+/*Hovers on the entire list*/
 @media (max-width:650px){
     .links-and-contacts{
         grid-template-columns: 100%;
     }
 }
 
-body {
-    font-family: 'Noto Sans', sans-serif;
-    background: #caebf2;
-  }
-
-  h1, h2, h3, h4 {
-    font-family: 'Roboto Mono', monospace;
-  }
-
 .container > div{
     margin: 50px auto;
 }
-.profile-picture:hover{
-    box-shadow: 0 8px 12px 0 rgb(34, 60, 80, 0.16);
-}
+
 .profile-picture{
     border-radius: 50%;
     width: 150px;
     height: 150px;
     box-shadow: 0 4px 6px 0 rgb(34, 60, 80, 0.16);
     transition: all ease-in-out .5s;
+}
+.profile-picture:hover{
+    filter:brightness(.75);
+    box-shadow: 0 8px 12px 0 rgb(34, 60, 80, 0.16);
 }
 
 .project-image-wrapper:hover {
@@ -147,8 +191,15 @@ form input, textarea{
 form input[type="submit"] {
     width: 250px;
 }
+
 .submit-button-wrapper{
     margin:20px 0;
 }
-/*Note that your code needs to be ordered From general rules to more specifics onbe */
 
+#submit-button{
+    color: blue;
+}
+#submit-button:hover, #submit-button:focus {
+    cursor: pointer;
+    opacity: 0.8;
+}

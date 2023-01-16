@@ -1,67 +1,60 @@
 <!DOCTYPE html>
- <!-- Full Stack // Intro Frontend -->
-    <!-- Creating the skeleton of your Portfolio-->
-    <!-- Based on previous course /* Intro Web Dev/-->
-    <!-- Intro to HTML / HTML5  https://www.w3schools.com/tags/tag_main.asp // Avdanced HTML-->
-    <!-- Implementing Accessibility check // Tota11y !! THIS IS COOL !! -->
-    <!-- Intro & Implementing Accessibility attributs specifications : ARIA for Dynamic content-->
-    <!-- ARIA Tuto : https://www.youtube.com/watch?v=LoAvF4VDBns&ab_channel=LearnEveryone -->
-
 <html>
+    <!-- Full Stack // Intro Frontend - CSS  styling layout 
+    Advanced CSS layout 
+    https://fonts.google.com/ ref for font embeding 
+    or https://www.fontpair.co/ Free fonts and font pairings-->
 
-    <header>
+
+    <head>
                 <title>Portfolio Homepage</title>
                 <link rel="stylesheet" href="style.css">
                 <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Adding a Favicon // https://favicomatic.com/ -->     
+
                 <link rel="shortcut icon" href="images/favicon-16x16.png" alt="profile picture - Audray">
                 <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono&display=swap" rel="stylesheet">
 
-
-                 <div>
-    <!-- Adding your logo here -->
-                    <img class="Portfolio-Logo" src="images/favicon-32x32.png" alt="profile picture - Audray">
-
-    <!-- Adding Navigation Menu -->
-    <!-- Creating folder structure for Website // Navigation Links  -->
-    <!-- Linking Pages Together e.g  : <a href="#"> Contact</a> becomes  <a href="contact.html"> Contact</a> -->
-                <nav class="menu">
-
-    <!-- Implementing ARIA-->   
-                                    <!-- Remove the bullet points ASAP !! -->  
-                    <ul role="menubar">
-                    <li role="presentation">
-                    <a href="index.html" role="menuitem" target="_self">Home</a>
-                    </li>
-                    </ul>
-
-                    <ul role="menubar">
-                    <li role="presentation">
-                    <a href="about.html" role="menuitem" target="_blank">About</a>
-                    </li>
-                    </ul>
-
-                    <ul role="menubar">
-                    <li role="presentation">
-                    <a href="contact.html" role="menuitem" target="_blank">Contact</a>
-                    </li>
-                    </ul>
-
-                </nav>
-
-                </div>
-    <!-- _blank: opens the link in a new window or tab  -->    
-    <!-- _self: opens the link -->   
+    </head>
+    <body>
+        <header class="page-header">
         
+<!--Not to self : creating a flexbox menu // detailing names of class to have better CSS selectors
+To be clarified !!!! --> 
 
-    </header>
-<body>
-    <main>
+                    <a href="index.html">
+                    <img src="images/favicon-32x32.png" alt="profile picture-Audray" class="page-header__item">
+                    </a>
+
+<!-- Note :  navigation active or not / links to specify which page is active -->
+                    <nav class="page-header__item">
+
+
+                        <ul role="menubar" class="navigation-list">
+                        <li role="presentation">
+                            <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active" target="_self">Home</a>
+                        </li>
+                    
+                        <li role="presentation">
+                            <a href="about.html" role="menuitem" class="navigation-list__item" target="_blank">About</a>
+                        </li>
+
+                        <li role="presentation">
+                            <a href="contact.html" role="menuitem" class="navigation-list__item" target="_blank">Contact</a>
+                        </li>
+                        </ul>
+
+                    </nav>
+
+                
+
+        </header>
+
+        <main>
 
                 <div class="container">
 
                         <div class="intro">
-    <!-- Added some pictures Of mine--> 
+
                             <img class="profile-picture" src="images/Queen.jpeg" alt="profile picture - Audray - Queen of Heart"/>
                             <h1 id="my-name">Audray Tety</h1>
                             <h3>Freelance Web developer</h3>
@@ -89,7 +82,7 @@
 
                         <h4 class="projects-heading"> My Projects </h4>
                         <div class="projects-grid">
-    <!-- Added some pictures Of mine--> 
+  
                             <div class="project-image-wrapper">
                             <img class="project-image" src="images/BeautifulStranger.jpeg" alt="Beautiful Stranger - Fire by the Seaside"/>
                             <h4> Project 1 </h4>
@@ -110,14 +103,13 @@
                             <h4> Project 4 </h4>
                             </div>
                         </div>
-                         </div>
-    </main>
-    <footer>
+                    </div>
+        </main>
+        <footer>
                         <div class="links-and-contacts">
                             <div class="links">
                             <h4>Links</h4>
-    <!-- Adding your Icons here + Links -->
-    <!-- Tip : https://www.iconfinder.com/ -->
+
                                 <ul class="links-list">
                                     <li> <a href="https://www.linkedin.com/">
                                     <img src="images/linkedin_icon.svg" alt="Linkedin" width="30px" height="30px">
@@ -137,10 +129,7 @@
                                 </ul>
                             </div>
 
-     <!-- Form : container with different attributs :
-    - action: where the form data is sent 
-    - method: for the HTTP method used GET or POST
-    N:B : Form validation / insuring the data collected is the accurate -->
+
                             <form action="/login-form-action" method="post">
                                 <label for="email"> 
                                 <h4> Email: </h4>
@@ -159,10 +148,10 @@
                         </div>
                     
                 
-    </footer>    
-            <script src="script.js"></script>
-    <!-- Tota11y : javascript pluggin  to check for accessibilty issues on HTML pages -->
+        </footer>    
+            
             <script src="js/tota11y.min.js"></script>
+            <script src="script.js"></script>
     </body>
 </html>
 
