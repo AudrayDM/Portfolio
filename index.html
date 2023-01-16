@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <!-- Full Stack // Intro Frontend - CSS  styling layout 
-    Advanced CSS layout 
-    https://fonts.google.com/ ref for font embeding 
-    or https://www.fontpair.co/ Free fonts and font pairings-->
-
+<!-- Full Stack // Intro Frontend - CSS  styling layout - Advanced CSS layout -->
 
     <head>
                 <title>Portfolio Homepage</title>
@@ -17,23 +13,16 @@
     </head>
     <body>
         <header class="page-header">
-        
-<!--Not to self : creating a flexbox menu // detailing names of class to have better CSS selectors
-To be clarified !!!! --> 
-
                     <a href="index.html">
                     <img src="images/favicon-32x32.png" alt="profile picture-Audray" class="page-header__item">
                     </a>
-
-<!-- Note :  navigation active or not / links to specify which page is active -->
+                    
                     <nav class="page-header__item">
-
-
                         <ul role="menubar" class="navigation-list">
                         <li role="presentation">
                             <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active" target="_self">Home</a>
                         </li>
-                    
+
                         <li role="presentation">
                             <a href="about.html" role="menuitem" class="navigation-list__item" target="_blank">About</a>
                         </li>
@@ -44,8 +33,6 @@ To be clarified !!!! -->
                         </ul>
 
                     </nav>
-
-                
 
         </header>
 
@@ -103,52 +90,55 @@ To be clarified !!!! -->
                             <h4> Project 4 </h4>
                             </div>
                         </div>
-                    </div>
-        </main>
-        <footer>
+      
+           
+
                         <div class="links-and-contacts">
-                            <div class="links">
-                            <h4>Links</h4>
 
-                                <ul class="links-list">
-                                    <li> <a href="https://www.linkedin.com/">
-                                    <img src="images/linkedin_icon.svg" alt="Linkedin" width="30px" height="30px">
-                                    </a></li>
+                                <form action="/login-form-action" method="post">
+                                    <label for="email"> 
+                                    <h4> Email: </h4>
+                                    <input type="email" id="email" name="user_email"></label>
+                                        
                                     
-                                    <li><a href="https://github.com/">
-                                    <img src="images/github_square_icon.svg" alt="Github" width="30px" height="30px">
-                                    </a></li>
-
-                                    <li><a href="https://www.instagram.com/">
-                                    <img src="images/instagram logo_icon.svg" alt="Instagram" width="30px" height="30px">
-                                    </a></li>
-
-                                    <li><a href="https://medium.com/">
-                                    <img src="images/medium logo_icon.svg" alt="Medium" width="30px" height="30px">
-                                    </a></li>
-                                </ul>
-                            </div>
-
-
-                            <form action="/login-form-action" method="post">
-                                <label for="email"> 
-                                <h4> Email: </h4>
-                                <input type="email" id="email" name="user_email"></label>
-                                    
-                                
-                                <label for="message">
-                                <h4> Message: </h4>  
-                                <textarea input type="text" required id="message"></textarea></label>
-
-                                <div class="submit-button-wrapper">
-                                <input  type="submit" id="submit-button" value="Send Message">
-                                </div>
+                                    <label for="message">
+                                    <h4> Message: </h4>  
+                                    <textarea input type="text" required id="message"></textarea></label>
+    
+                                    <div class="submit-button-wrapper">
+                                    <input  type="submit" id="submit-button" value="Send Message">
+                                    </div>
                             </form>
-
                         </div>
-                    
+                    </div>
                 
-        </footer>    
+                
+          </main>                    
+            <footer class="page-footer">
+
+                    <h4 id="social">Find me on </h4>
+
+                        <div class="links-list">
+                            <a href="https://www.linkedin.com/">
+                            <img src="images/linkedin_icon.svg" alt="Linkedin" width="30px" height="30px"></a>
+                           
+                            
+                            <a href="https://github.com/">
+                            <img src="images/github_square_icon.svg" alt="Github" width="30px" height="30px"></a>
+                            
+
+                            <a href="https://www.instagram.com/">
+                            <img src="images/instagram logo_icon.svg" alt="Instagram" width="30px" height="30px"></a>
+                           
+
+                            <a href="https://medium.com/">
+                            <img src="images/medium logo_icon.svg" alt="Medium" width="30px" height="30px"></a>
+                            
+            
+                        </div>
+
+
+                </footer>    
             
             <script src="js/tota11y.min.js"></script>
             <script src="script.js"></script>

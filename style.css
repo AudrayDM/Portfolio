@@ -1,12 +1,29 @@
-/*Tips for Best practices Web Content Accessibility https://www.w3.org/WAI/standards-guidelines/wcag/ */
-/*https://fonts.google.com/ ref for font embeding*/
-/*Note that your code needs to be ordered From general rules to more specifics onbe */
+/*
+/*https://fonts.google.com/ reference for font embeding   or https://www.fontpair.co/ Free fonts and font pairings */
 /*Tips for Chosing the right color https://www.color-hex.com/ or https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF */
-/*Tips for mastering margin collapsing https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing*/
 /*Tips for display best practice https://www.w3schools.com/css/css_display_visibility.asp*/
+/*Tips for Best practices Web Content Accessibility https://www.w3.org/WAI/standards-guidelines/wcag/ */
+
+/*Note that your code needs to be ordered From general rules to more specifics onbe */
+
+/*Tips for mastering margin collapsing https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing*/
+
 
 /*Tips TO TRY !!!!WORKING WITH VERTICAL SCRIPTS !!! Soo Cool!!!
 https://www.w3.org/International/articles/vertical-text/
+
+This Section is Full Stack // Intro Frontend - 
+    Intro CSS  styling layout - Advanced CSS layout - CSS Preprocessors & CSS Variables 
+            Styling Header - Footer 
+            Building flexible layout using :
+            Flexbox // CSS grid // media queries for mobile responsivness // 
+            Customizing Buttons // Adding external links - To be completed with project...
+            Adding icons to social media // adding personal files e.g CV Or contacts e.g email Or Phone
+            Intro To CSS Frameworks - predefined set of code for creating and styling Website 
+            --- Two most popular Frameworks  :
+            Bootstrap: https://getbootstrap.com/
+            Foundation: https://get.foundation/
+
 */
 
 * {
@@ -28,14 +45,13 @@ https://www.w3.org/International/articles/vertical-text/
     text-align: right;
   }
   
-  .navigation-list {
+.navigation-list {
     list-style-type: none;
   }
 .navigation-list li {
   display: inline-block;
   margin-left: 15px;
 }
-
 
 body {
     font-family: 'Noto Sans', sans-serif;
@@ -62,7 +78,6 @@ h4{
 
 #my-name{ color:brown;
 }
-
 
 @media (max-width:600px){
     .grid-table{
@@ -108,28 +123,6 @@ h4{
 }
 @media (max-width:650px){
     .projects-grid{
-        grid-template-columns: 100%;
-    }
-}
-.links-and-contacts{
-    display: grid; 
-    grid-template-columns: 50% 50%;    
-}
-.links{  
-    justify-self: center;
-}
-.links-list{
-    list-style: none;
-    padding: 0;
-}
-
-.links-list:hover{
-    filter:brightness(.75);
-    box-shadow: 0 8px 12px 0 rgb(34, 60, 80, 0.16);
-}
-/*Hovers on the entire list*/
-@media (max-width:650px){
-    .links-and-contacts{
         grid-template-columns: 100%;
     }
 }
@@ -192,13 +185,47 @@ form input[type="submit"] {
     width: 250px;
 }
 
+.links-and-contacts{
+    display: grid; 
+    grid-template-columns: 50% 50%;    
+}
+
+.page-footer {
+    clear: both;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+#social{
+    text-align: center;
+
+}
+
+@media (max-width:650px){
+    .links-and-contacts{
+        grid-template-columns: 100%;
+    }
+}
+
 .submit-button-wrapper{
     margin:20px 0;
 }
 
-#submit-button{
+#submit-button {
     color: blue;
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    background-color: #357b70;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition: 0.2s opacity;
 }
+
 #submit-button:hover, #submit-button:focus {
     cursor: pointer;
     opacity: 0.8;
