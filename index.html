@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+ <!-- Full Stack // Intro Frontend -->
+    <!-- Creating the skeleton of your Portfolio-->
+    <!-- Based on previous course /* Intro Web Dev/-->
+    <!-- Intro to HTML / HTML5  https://www.w3schools.com/tags/tag_main.asp // Avdanced HTML-->
+    <!-- Implementing Accessibility check // Tota11y !! THIS IS COOL !! -->
+    <!-- Intro & Implementing Accessibility attributs specifications : ARIA for Dynamic content-->
+    <!-- ARIA Tuto : https://www.youtube.com/watch?v=LoAvF4VDBns&ab_channel=LearnEveryone -->
+
+<html>
+
+    <header>
+                <title>Portfolio Homepage</title>
+                <link rel="stylesheet" href="style.css">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Adding a Favicon // https://favicomatic.com/ -->     
+                <link rel="shortcut icon" href="images/favicon-16x16.png" alt="profile picture - Audray">
+                <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono&display=swap" rel="stylesheet">
+
+
+                 <div>
+    <!-- Adding your logo here -->
+                    <img class="Portfolio-Logo" src="images/favicon-32x32.png" alt="profile picture - Audray">
+
+    <!-- Adding Navigation Menu -->
+    <!-- Creating folder structure for Website // Navigation Links  -->
+    <!-- Linking Pages Together e.g  : <a href="#"> Contact</a> becomes  <a href="contact.html"> Contact</a> -->
+                <nav class="menu">
+
+    <!-- Implementing ARIA-->   
+                                    <!-- Remove the bullet points ASAP !! -->  
+                    <ul role="menubar">
+                    <li role="presentation">
+                    <a href="index.html" role="menuitem" target="_self">Home</a>
+                    </li>
+                    </ul>
+
+                    <ul role="menubar">
+                    <li role="presentation">
+                    <a href="about.html" role="menuitem" target="_blank">About</a>
+                    </li>
+                    </ul>
+
+                    <ul role="menubar">
+                    <li role="presentation">
+                    <a href="contact.html" role="menuitem" target="_blank">Contact</a>
+                    </li>
+                    </ul>
+
+                </nav>
+
+                </div>
+    <!-- _blank: opens the link in a new window or tab  -->    
+    <!-- _self: opens the link -->   
+        
+
+    </header>
+<body>
+    <main>
+
+                <div class="container">
+
+                        <div class="intro">
+    <!-- Added some pictures Of mine--> 
+                            <img class="profile-picture" src="images/Queen.jpeg" alt="profile picture - Audray - Queen of Heart"/>
+                            <h1 id="my-name">Audray Tety</h1>
+                            <h3>Freelance Web developer</h3>
+                            <p> {{ Sit back, relax and enjoy the show ! }}</p>
+                        </div>
+
+                        <div class="about-grid">
+                            <div class="i-am">
+                                    <h4>I am</h4>
+                                    <ul class="about-list">
+                                    <li class="about-list-item">A Pizza</li>
+                                    <li class="about-list-item">A Bird</li>
+                                    <li class="about-list-item">A Word</li>
+                                    </ul>
+                            </div>
+                            <div class="i-like">
+                                    <h4> I like </h4>
+                                    <ul class="about-list">
+                                    <li class="about-list-item">Pizzaz</li>
+                                    <li class="about-list-item">Chicken</li>
+                                    <li class="about-list-item">Cheese!</li>
+                                    </ul>
+                            </div>
+                        </div>
+
+                        <h4 class="projects-heading"> My Projects </h4>
+                        <div class="projects-grid">
+    <!-- Added some pictures Of mine--> 
+                            <div class="project-image-wrapper">
+                            <img class="project-image" src="images/BeautifulStranger.jpeg" alt="Beautiful Stranger - Fire by the Seaside"/>
+                            <h4> Project 1 </h4>
+                            </div>
+
+                            <div class="project-image-wrapper">
+                            <img class="project-image" src="images/black-book.jpeg" alt="Black and white - Black-Book & Red Rose"/>
+                            <h4> Project 2 </h4>
+                            </div>
+                            
+                            <div class="project-image-wrapper">
+                            <img class="project-image" src="images/guzman-barquin.unsplash.jpg" alt="Unsplash - FullMoon over the Sea"/>
+                            <h4> Project 3 </h4>
+                            </div>
+
+                            <div class="project-image-wrapper">
+                            <img class="project-image" src="images/sid-balachandran.unsplash.jpg" alt="Unsplash - Birds of Paradise"/>
+                            <h4> Project 4 </h4>
+                            </div>
+                        </div>
+                         </div>
+    </main>
+    <footer>
+                        <div class="links-and-contacts">
+                            <div class="links">
+                            <h4>Links</h4>
+    <!-- Adding your Icons here + Links -->
+    <!-- Tip : https://www.iconfinder.com/ -->
+                                <ul class="links-list">
+                                    <li> <a href="https://www.linkedin.com/">
+                                    <img src="images/linkedin_icon.svg" alt="Linkedin" width="30px" height="30px">
+                                    </a></li>
+                                    
+                                    <li><a href="https://github.com/">
+                                    <img src="images/github_square_icon.svg" alt="Github" width="30px" height="30px">
+                                    </a></li>
+
+                                    <li><a href="https://www.instagram.com/">
+                                    <img src="images/instagram logo_icon.svg" alt="Instagram" width="30px" height="30px">
+                                    </a></li>
+
+                                    <li><a href="https://medium.com/">
+                                    <img src="images/medium logo_icon.svg" alt="Medium" width="30px" height="30px">
+                                    </a></li>
+                                </ul>
+                            </div>
+
+     <!-- Form : container with different attributs :
+    - action: where the form data is sent 
+    - method: for the HTTP method used GET or POST
+    N:B : Form validation / insuring the data collected is the accurate -->
+                            <form action="/login-form-action" method="post">
+                                <label for="email"> 
+                                <h4> Email: </h4>
+                                <input type="email" id="email" name="user_email"></label>
+                                    
+                                
+                                <label for="message">
+                                <h4> Message: </h4>  
+                                <textarea input type="text" required id="message"></textarea></label>
+
+                                <div class="submit-button-wrapper">
+                                <input  type="submit" id="submit-button" value="Send Message">
+                                </div>
+                            </form>
+
+                        </div>
+                    
+                
+    </footer>    
+            <script src="script.js"></script>
+    <!-- Tota11y : javascript pluggin  to check for accessibilty issues on HTML pages -->
+            <script src="js/tota11y.min.js"></script>
+    </body>
+</html>
+

@@ -1,0 +1,154 @@
+/*Tips for Best practices Web Content Accessibility https://www.w3.org/WAI/standards-guidelines/wcag/ */
+
+p{
+    color:brown;
+}
+h3{
+    color:blue;  
+}
+h4{
+    color:blue;  
+}
+
+.about-list-item {
+    font-style: italic;
+}
+
+#my-name{ color:brown;
+}
+
+
+@media (max-width:600px){
+    .grid-table{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto; 
+    }
+}
+
+.container {
+    max-width:840px;
+    margin: 0 auto;
+}
+
+.intro{
+    text-align: center;
+}
+.about-grid{
+    display: grid; 
+    grid-template-columns: 50% 50%;
+}
+.i-am,.i-like{
+    text-align: center;
+}
+.about-list{
+    list-style: none;
+}
+
+@media (max-width:480px){
+    .about-grid{
+        grid-template-columns: 100%;
+    }
+}
+.projects-heading{
+    text-align: center;
+}
+.projects-grid{
+    display: grid; 
+    grid-template-columns: 50% 50%;
+}
+.project-image{
+    justify-self: center;
+    padding: 4%;
+}
+@media (max-width:650px){
+    .projects-grid{
+        grid-template-columns: 100%;
+    }
+}
+.links-and-contacts{
+    display: grid; 
+    grid-template-columns: 50% 50%;    
+}
+.links{  
+    justify-self: center;
+}
+.links-list{
+    list-style: none;
+    padding: 0;
+}
+
+@media (max-width:650px){
+    .links-and-contacts{
+        grid-template-columns: 100%;
+    }
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background: #caebf2;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Roboto Mono', monospace;
+  }
+
+.container > div{
+    margin: 50px auto;
+}
+.profile-picture:hover{
+    box-shadow: 0 8px 12px 0 rgb(34, 60, 80, 0.16);
+}
+.profile-picture{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 4px 6px 0 rgb(34, 60, 80, 0.16);
+    transition: all ease-in-out .5s;
+}
+
+.project-image-wrapper:hover {
+    justify-self: center;
+    padding: 4%;
+    position: relative;
+}
+.project-image{
+    border-radius: 5px;
+    width: 350px;
+    height: 350px;
+    box-shadow: 0 4px 6px 0 rgb(34, 60, 80, 0.16);
+    transition: all ease-in-out .5s;
+
+}
+.project-image:hover{
+    filter:brightness(.75);
+    box-shadow: 0 8px 12px 0 rgb(34, 60, 80, 0.16);
+}
+
+.project-image-wrapper:hover > h4 {
+    visibility: visible;
+    
+}
+.project-image-wrapper:hover > h4 {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    visibility: hidden;
+    z-index: 2;
+    transition: all ease-in-out .5s;
+}
+ 
+form input, textarea{
+    padding: 5px;
+    border-radius: 5px;
+    width: 240px;
+}
+form input[type="submit"] {
+    width: 250px;
+}
+.submit-button-wrapper{
+    margin:20px 0;
+}
+/*Note that your code needs to be ordered From general rules to more specifics onbe */
+
